@@ -7,8 +7,35 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
+            App classUnderTest = new App();
+
+            assertEquals(441599.99609375, 
+                classUnderTest.Calcular_rod_seg((short)1981, 6400000),
+                0.001, 
+                "Se esperaba un valor como 441599.99609375");
+
+            assertEquals(690000.0, 
+                classUnderTest.Calcular_rod_seg((short)1976,10000000),
+                0.001, 
+                "Se esperaba un valor como 690000.0");
+
+            assertEquals(6209999.9375, 
+                classUnderTest.Calcular_rod_seg((short)1935,90000000),
+                0.001, 
+                "Se esperaba un valor como 6209999.9375");     
+
+            assertEquals(-1.0, 
+                classUnderTest.Calcular_rod_seg((short)1990,4000000),
+                0.001, 
+                "Se esperaba un valor como -1.0");
+            
+            assertEquals(1.14822E7, 
+                classUnderTest.Calcular_rod_seg((short)2025,180000000),
+                0.001, 
+                "Se esperaba un valor como 1.14822E7");
+
+            assertEquals(-1.0, 
+                classUnderTest.Calcular_rod_seg((short)2026,200000000),
+                0.001, 
+                "Se esperaba un valor como -1.0");
 }
